@@ -1,0 +1,39 @@
+header{
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    margin-left: 1rem;
+    color: white;
+}
+nav img{
+    width: 60px;
+    height: 60px;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0px 50px;
+    list-style: none;
+    font-family: "Open sans",sans-serif;
+    font-size: clamp(1rem,1vw,5rem);
+}
+
+@media screen and (max-width:365px){
+    nav{
+        flex-direction: column;
+    }
+    ul{
+        flex-direction: column;
+    }
+}

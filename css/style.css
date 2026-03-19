@@ -3,29 +3,25 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-header{
-    width: 100%;
-    height: 6rem;
-    background-color: cadetblue;
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 main{
     margin-top: 3rem;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     align-items: center;
     flex-direction: column;
     max-width: 100%;
 }
-
 .conteiner{
     width: 80%;
     height: auto;
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(min(250px,100%),1fr));
     gap: 20px;
-    
-    
 }
 .col{
     background-color: violet;
@@ -33,18 +29,23 @@ main{
     border: none;
     border-radius: 1.5rem;
     transition: transform .2s ease-in-out;
+    overflow: hidden;
+    position: relative;
 }
 .col:hover{
     transform: translateY(-8px);
     box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
 }
-
 .grande{
     grid-column: span 2;
     grid-row: span 2;
     background-color: aqua;
+    overflow: hidden;
 }
-
+img{
+    width: 100%;
+    height: 100%;
+}
 .alto{
     grid-row: span 2;
     background-color: red;
@@ -54,81 +55,102 @@ a{
     text-decoration: none;
     color: inherit;
 }
-footer{
-    margin-top: 3rem;
-    width: 100%;
-    height:auto;
-    background-color: black;
-}
-.pai{
-    max-width: 1200px ;
-    height:auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px, 1fr));
-    margin: 0 auto;
-    gap: 30px;
-    padding: 1rem 2rem;
-    color: white;
-}
-.foot{
-    background-color: rgb(238, 32, 238);
-    aspect-ratio: 2/1;
-    border: none;
-    border-radius: 1.5rem;
-    transition: transform .2s ease-in-out;
-}
-.foot:hover{
-    transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
-}
-.linha{
-    grid-column: 1/-1;
-    height:0.5px;
-    border:0.5px solid white;
-}
-.mae{
-    display: grid;
-    grid-template-columns: repeat(2,50%);
-    gap: 30px;
-    padding: 0rem 2rem;
-    color: white;
-}
-.copy{
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.galeria{
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    color: wheat;
-    padding: 2rem;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.foot-img img{
-    max-height:4rem;
-    max-width:4rem;
-    background-color: whitesmoke;
-    transition: transform .2s ease-in-out;
-}
-
-.foot-img img:hover{
-    transform: rotateX(180deg);
-    
-}
 /* .foot-img::before{
     content: "✋😜🤚";
 } */
-
-
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    background-color: #1e1e1e;
+    padding: 1rem;
+}
+/* cmc form */
+form{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    width: 70%;
+    height: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform .2s ease-in-out;
+}
+form:hover{
+    transform: translateY(-10px);
+    box-shadow: 2px 5px 7px 0px #851c85;
+}
+.lado-e{
+    height: auto;
+}
+.lado-e img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.lado-d{
+    background: linear-gradient(0deg, #000,#000000da);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caixa-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
+    gap: 15px;
+    width: 60%;
+}
+.form-intro h1{
+    font-family: "Montserrat",sans-serif;
+    color: white;
+}
+input{
+    width: 100%;
+    padding: 0.6rem 0.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    transition: transform .2s ease-in-out
+}
+input:hover{
+    transform: translateY(-5px);
+    box-shadow: 3px 5px 7px #851c85;
+}
+button{
+    width: 100%;
+    padding: 0.6rem 0.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    transition: transform .2s ease-in-out;
+    background-color: blue;
+    color: white;
+    font-family: "Open sans",sans-serif;
+    font-size: clamp(0.5rem,2vw,1rem);
+}
+button:hover{
+    transform: translateY(-5px);
+    box-shadow: 3px 5px 7px #851c85;    
+}
+/* fim form */
 @media (max-width: 663px){
     .grande{
         grid-column: span 1;
         grid-row: span 1;
         aspect-ratio: 1/1;
+    }
+    form{
+        width: 80%;
+        grid-template-columns: 1fr;
+    }
+    .lado-e{
+        max-height: 50rem;
+    }
+    .lado-d{
+        padding: 1rem;
     }
 }
