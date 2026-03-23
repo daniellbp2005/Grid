@@ -23,6 +23,12 @@ main{
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+.lado{
+    transition: transform .2s ease-in-out;
+}
+.lado:hover{
+    transform: translateY(-5px) scale(1.02);
+}
 .lado-eq{
     background-color: #fff;
     width: 100%;
@@ -32,9 +38,7 @@ main{
     overflow: hidden;
     transition: transform .2s ease-in-out;
 }
-.lado-eq:hover{
-    transform: scale(1.02);
-}
+
 .linha-cont{
     width: 100%;
     height: auto;
@@ -61,7 +65,7 @@ main{
 .icon{
     width: 60px;
     height: 60px;
-    background-color: ;
+
 }
 .icon img{
     width: 100%;
@@ -69,7 +73,7 @@ main{
 }
 .linha-cont button{
     font-family: "Open sans",sans-serif;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     border: none;
     border-radius: 1rem;
     transition: transform .2s ease-in-out;
@@ -77,12 +81,15 @@ main{
     color: #fff;
 }
 .linha-cont button:hover{
-    transform: translateY(-5px)
+    transform: translateY(-5px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+
 }
 .cont-baixo{
     padding: 1rem   ;
     display: flex;
     justify-content: center;
+    height: 90%;
 }
 .img-prod{
     border-radius: 1.5rem;
@@ -90,12 +97,34 @@ main{
     height: 100%;
 }
 .lado-di{
-    background-color: rgb(151, 174, 194);
+    background-color: aliceblue;
     width: 100%;
     height: auto;
+    border: 1px #1e1e1e86 solid;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform .2s ease-in-out;
 }
 .cont-lado-di{
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 1rem;
+}
+.cont-lado-di button{
+    padding: 0.7rem 1rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 1.5rem;
+    border: none;
+    transition: transform .2s ease-in-out;
+    width:65%;
+    margin: 0 auto;
+}
+.cont-lado-di button:hover{
+    transform: translateY(-5px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
 }
 .cont-lado-di p{
     text-align: left;
@@ -113,4 +142,49 @@ main{
     font-size: clamp(1rem,1.2vw,2rem);
     text-align: left;
     font-family: "Montserrat",sans-serif;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+form input{
+    width: 80%;
+    height: auto;
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 1.5rem;
+    transition: transform .2s ease-in-out;
+}
+form input:hover{
+    transform: translateY(-5px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+}
+form button{
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 1.5rem;
+    border: none;
+    transition: transform .2s ease-in-out;
+}
+form button:hover{
+    transform: translateY(-5px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+}
+@media (max-width:950px){
+    .conteiner{
+        grid-template-columns: 1fr;
+    }
+    .cont-lado-di{
+        align-items: center;
+    }
+    .cont-lado-di button {
+    width: auto;
+    }
+    form{
+        width: 70%;
+    }
 }
