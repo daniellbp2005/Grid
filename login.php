@@ -1,12 +1,16 @@
-<!DOCTYPE html>
+<?php include "data.php";?>
+<!DOCTYPE html >
 <html lang="pt-br">
 <head>
+<!-- //require se o arquivo n existir o site quebra
+//include se o arquivo n existir ctn a execussão
+// ctl + f -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="    css/footer.css">
     <link rel="icon" href="../img/logos-Photoroom (1).png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +23,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
-
 </head>
 <body>
     <main>
@@ -28,21 +31,21 @@
                     <div class="col-e">
                         <h1>Bem vindo de Volta !</h1>
                         <p>Caso queira criar uma conta, clique no botão abaixo</p>
-                        <button ><a href="cadastro.html">Cadastro</a></button>
-                        <button ><a href="../index.html">Voltar</a></button>
+                        <button ><a href="cadastro.php">Cadastro</a></button>
+                        <button ><a href="index.php">Voltar</a></button>
                     </div>
                     <div class="col-d">
                         <div class="Pai">
                             <h1 class="Modo" >Fazer Login</h1>
                             <div class="logs">
                                 <div class="circulo">
-                                    <img src="../img/github_foto.png" id="a"draggable="false">
+                                    <img src="img/github_foto.png" id="a"draggable="false">
                                 </div>
                                 <div class="circulo">
-                                    <img src="../img/X_foto.png" id="b"draggable="false">
+                                    <img src="img/X_foto.png" id="b"draggable="false">
                                     </div>
                                 <div class="circulo">
-                                    <img src="../img/instagram_foto.png" id="c"draggable="false">
+                                    <img src="img/instagram_foto.png" id="c"draggable="false">
                                 </div>
                             </div>
                             <div class="texto">
@@ -62,4 +65,4 @@
         </div>
         <script src="../js/jjs.js"></script>
 </body>
-</html>
+</php >

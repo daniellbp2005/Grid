@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+<?php 
+include "data.php";
+?>
+<!DOCTYPE html >
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRID</title>
+    <title><?php print $nomeLoja; ?></title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -16,17 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href=""><img src="img/logos-Photoroom (1).png" alt=""></a>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Catálogo</a></li>
-                <li><a href="html/login.html">Login</a></li>
-                <li><a href="">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php 
+    require 'partials/header.php';
+    ?>
     <main>
         <div class="conteiner">
             <div class="col grande">
@@ -36,7 +31,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo">
@@ -58,7 +53,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -79,7 +74,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -100,7 +95,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -121,7 +116,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -142,7 +137,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -163,7 +158,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -184,7 +179,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -205,7 +200,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -226,7 +221,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -247,7 +242,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -268,7 +263,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -289,7 +284,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -310,7 +305,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -331,7 +326,7 @@
                         <option value=""><a href="">opções</a></option>
                         <option value="">Comprar</option>
                     </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                    <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -390,10 +385,9 @@
             
             
         </div>
-        
     </main>
     <section>
-        <form>
+        <form action="processa-contato.php" method="get">
             <div class="lado-e">
                 <img src="img/img_1.jpg" alt="">
             </div>
@@ -402,109 +396,19 @@
                     <div class="form-intro">
                         <h1>Faça seu Pedido Personalizado</h1>
                     </div>
-                    <input type="text" placeholder="Digite seu Nome Completo" id="nome">
-                    <input type="email" placeholder="Digite seu Email" id="email">
-                    <input type="tel" placeholder="(11) 98712-1234" id="tel">
-                    <input type="password" placeholder="Digite sua Senha" id="pass">
-                    <button id="btnEnviar">Enviar</button>
+                    <input type="text" name="nome" placeholder="Digite seu Nome Completo" id="nome"> <!-- coloquei password no nome para escondelo-->
+                    <input type="email" name="email" placeholder="Digite seu Email" id="email">
+                    <input type="tel" name="telefone" placeholder="(11) 98712-1234" id="tel">
+                    <input type="password" name="senha" placeholder="Digite sua Senha" id="pass">
+                    <button id="btnEnviar" name="enviar">Enviar</button>
                     <p class="text-form1" id="paragrafo">Preencha o Formulário</p>
                 </div>
             </div>
         </form>
     </section>
-    <footer>
-        <div class="footer-cima">
-            <div class="foot ">
-                <div class="titulo-foot">
-                    Produtos
-                </div>
-                <p>
-                    Templetes de Imgs
-                </p>
-                <p>
-                    Design Inteligente
-                </p>
-                <p>
-                    Pagamentos
-                </p>
-                <p>
-                    E-mail Profissional
-                </p>
-            </div>
-            <div class="foot">
-                <div class="titulo-foot">
-                    Programas
-                </div>
-                <p>
-                    Afiliados
-                </p>
-                <p>
-                    Estudantes
-                </p>
-                <p>
-                    Socios
-                </p>
-                <p>
-                    Contato
-                </p>
-            </div>
-            <div class="foot">
-                <div class="titulo-foot">
-                    Empresa
-                </div>
-                <p>
-                    Sobre
-                </p>
-                <p>
-                    Carreira
-                </p>
-                <p>
-                    Nossa História
-                </p>
-                <p>
-                    Nossa Empresa
-                </p>
-            </div>
-            <div class="foot">
-                <div class="titulo-foot">
-                    Siga a Gente
-                </div>
-                <p>
-                    Instagram
-                </p>
-                <p>
-                    Youtube
-                </p>
-                <p>
-                    Linkendin
-                </p>
-                <p>
-                    Facebook
-                </p>
-            </div>
-            
-        </div>
-        <div class="footer-baixo">
-            <div class="linha"></div>
-            <div class="copy">
-                <div class="foot-texto"> Todos os diretos reservados a StyleScale ©.</div>
-            </div>
-            <div class="galeria">
-                <div class="foot-img">
-                    <img src="img/zap_foto.png" alt="foto" draggable="false">
-                </div>
-                <div class="foot-img">
-                    <img src="img/X_foto.png" alt="foto" draggable="false">
-                </div>
-                <div class="foot-img">
-                    <img src="img/instagram_foto.png" alt="foto" draggable="false">
-                </div>
-                <div class="foot-img">
-                    <img src="img/youtube_foto.png" alt="foto" draggable="false">
-                </div>
-            </div> 
-        </div>
-    </footer>
-    <script src="js/script.js"></script>
+    <?php
+    require 'partials/footer.php';
+    ?>
+    <!-- <script src="js/script.js"></script> -->
 </body>
-</html>
+</php >
