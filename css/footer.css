@@ -28,7 +28,10 @@ footer{
 .titulo-foot{
     font-family: "Montserrat",sans-serif;
     font-weight: 600;
+    transition: transform .2s ease-in-out;
+
 }
+
 .foot p{
     font-family: "Open sans",sans-serif;
     font-size: clamp(12px,1vw,15px);
@@ -36,7 +39,7 @@ footer{
     transition: transform .2s ease-in-out;
 }
 .foot p:hover{
-    font-weight: 400;
+    font-weight: 600;
 }
 .linha{
     grid-column: 1/-1;
