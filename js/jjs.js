@@ -16,7 +16,7 @@
         p.innerText="Preencha os campos do formulário"
 
         }else{
-            window.location.href = "../index.html"
+            window.location.href = "index.php"
         }
     })
 

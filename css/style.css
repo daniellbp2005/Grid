@@ -655,7 +655,7 @@ input:hover{
     border: none;
     border-radius: 1.5rem;
     transition: transform .2s ease-in-out;
-    background-color: blue;
+    background:radial-gradient(circle at bottom left, blue,black);
     color: white;
     font-family: "Open sans",sans-serif;
     font-size: clamp(0.5rem,2vw,1rem);
@@ -664,6 +664,46 @@ input:hover{
     transform: translateY(-5px);
     box-shadow: 3px 5px 7px #851c85;    
 }
+
+.form-linha{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.radio{
+    width: 20px;
+    height: auto;
+    color: white;
+    transition: none;
+}
+.direita{
+    color: white;
+    font-family: "Open sans",sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+.direita p{
+    font-size: clamp(0.5rem,1vw,0.8rem);
+}
+.esquerda select{
+    border: none;
+    border-radius: 1.5rem;
+    background: radial-gradient(circle at bottom left, #000,#851c85);
+    color: rgb(212, 250, 0);
+    padding: 0.5rem;
+    transition: transform .2s ease-in-out;
+}
+option:checked{
+    background-color: #000;
+}
+.esquerda select:hover{
+    transform: translateY(-3px);
+    box-shadow: 3px 5px 7px #851c85;  
+}
+
 /* fim form */
 @media (max-width: 663px){
     .grande{
@@ -680,5 +720,14 @@ input:hover{
     }
     .lado-d{
         padding: 1rem;
+    }
+    .esquerda{
+        display: flex;
+        justify-content: center;
+    }
+    .form-linha{
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
     }
 }

@@ -4,6 +4,7 @@ const senha = document.getElementById("pass")
 const btn = document.getElementById("btn")
 
 
+
 btn.addEventListener("click", (e)=>{
     e.preventDefault()
     if(
@@ -14,6 +15,6 @@ btn.addEventListener("click", (e)=>{
         p.style.color = "red";
         p.innerText = "Preencha os campos do formulário"
     }else{
-        window.location.href = "../index.html"
+        window.location.href = "index.php"
     }
 })

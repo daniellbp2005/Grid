@@ -25,6 +25,5 @@ btnEnviar.addEventListener("click", (e)=>{
         telefone.value = "";
         p.style.color = "green"
         p.innerText="Mensagem Enviada !"
-
     }
 })
