@@ -1,9 +1,18 @@
+<?php
+include "data.php";
+
+print_r($categorias);
+print_r($produtos_base);
+print '<\pre>'
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRID</title>
+    <title><?php print $nomeLoja; ?></title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -15,28 +24,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <a href=""><img src="img/logos-Photoroom (1).png" alt=""></a>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Catálogo</a></li>
-                <li><a href="html/login.html">Login</a></li>
-                <li><a href="">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php
+    require 'partials/header.php';
+    ?>
     <main>
+        <div class="categoria">
+            <p>Catálogo de Produtos:</p>
+            <ul class="ul-cat">
+                <li><a href="">Abstratas</a></li>
+                <li><a href="">Minimalista</a></li>
+                <li><a href="">Editorial</a></li>
+                <li><a href="">Comercial</a></li>
+            </ul>
+        </div>
         <div class="conteiner">
             <div class="col grande">
                 <div class="cima">
                     <div class="linha-cima">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo">
@@ -44,21 +55,21 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="tres">
+                        <button id="tres">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-1"id="img-col" draggable="false">
+            <div class="col-1" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -66,20 +77,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col-2"id="img-col" draggable="false">
+            <div class="col-2" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -87,20 +98,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-3" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -108,20 +119,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-4" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -129,20 +140,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-5" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -150,20 +161,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col alto"  id="img-col" draggable="false">
+            <div class="col alto" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -171,20 +182,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-7" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -192,20 +203,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-8" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -213,20 +224,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col-9" id="img-col" draggable="false" >
+            <div class="col-9" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -234,20 +245,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col-10" id="img-col" draggable="false" >
+            <div class="col-10" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -255,20 +266,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col-11" id="img-col" draggable="false" >
+            <div class="col-11" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -276,20 +287,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col-12" id="img-col" draggable="false" >
+            <div class="col-12" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -297,20 +308,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col-13" id="img-col" draggable="false" >
+            <div class="col-13" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -318,20 +329,20 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col-14" id="img-col" draggable="false" >
+            <div class="col-14" id="img-col" draggable="false">
                 <div class="cima-col">
                     <div class="linha-cima-col">
-                    <select name="" id="">
-                        <option value=""><a href="">opções</a></option>
-                        <option value="">Comprar</option>
-                    </select>
-                    <button class="salvar-col"><a href="html/produto.html">Acessar</a></button>
+                        <select name="" id="">
+                            <option value=""><a href="">opções</a></option>
+                            <option value="">Comprar</option>
+                        </select>
+                        <button class="salvar-col"><a href="produto.php">Acessar</a></button>
                     </div>
                 </div>
                 <div class="baixo-col">
@@ -339,13 +350,13 @@
                         <button>
                             <a href=""><img src="img/download-removebg-preview.png" alt=""></a>
                         </button>
-                         <button id="quatro">
+                        <button id="quatro">
                             <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>   
+                        </button>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col" id="img-col" draggable="false">
                 <img src="img/img_3.jpg" alt="" class="img-col">
             </div>
@@ -361,39 +372,38 @@
             <div class="col" id="img-col" draggable="false">
                 <img src="img/img_7.jpg" alt="">
             </div>
-            <div class="col largo"  id="img-col" draggable="false">
+            <div class="col largo" id="img-col" draggable="false">
                 <img src="img/img_13.jpg" alt="">
             </div>
-            <div class="col alto" id="img-col" draggable="false">
+            <div class="col alto2" id="img-col" draggable="false">
             </div>
             <div class="col" id="img-col" draggable="false">
                 <img src="img/img_10.jpg" alt="">
             </div>
-            <div class="col" id="img-col" draggable="false" >
+            <div class="col" id="img-col" draggable="false">
                 <img src="img/img_11.jpg" alt="">
             </div>
-            <div class="col" id="img-col" draggable="false" >
+            <div class="col" id="img-col" draggable="false">
                 <img src="img/img_12.jpg" alt="">
             </div>
-            <div class="col" id="img-col" draggable="false" >
+            <div class="col" id="img-col" draggable="false">
                 <img src="img/img_13.jpg" alt="">
             </div>
-            <div class="col" id="img-col" draggable="false" >
+            <div class="col" id="img-col" draggable="false">
                 <img src="img/img_14.jpg" alt="">
             </div>
-            <div class="col" id="img-col" draggable="false" >
+            <div class="col" id="img-col" draggable="false">
                 <img src="img/img_15.jpg" alt="">
             </div>
-            <div class="col" id="img-col" draggable="false" >
+            <div class="col" id="img-col" draggable="false">
                 <img src="img/img_16.jpg" alt="">
             </div>
-            
-            
+
+
         </div>
-        
     </main>
     <section>
-        <form>
+        <form action="data.php" method="POST">
             <div class="lado-e">
                 <img src="img/img_1.jpg" alt="">
             </div>
@@ -402,109 +412,37 @@
                     <div class="form-intro">
                         <h1>Faça seu Pedido Personalizado</h1>
                     </div>
-                    <input type="text" placeholder="Digite seu Nome Completo" id="nome">
-                    <input type="email" placeholder="Digite seu Email" id="email">
-                    <input type="tel" placeholder="(11) 98712-1234" id="tel">
-                    <input type="password" placeholder="Digite sua Senha" id="pass">
-                    <button id="btnEnviar">Enviar</button>
+                    <input type="text" name="nome" placeholder="Digite seu Nome Completo" id="nome"> <!-- coloquei password no nome para escondelo-->
+                    <input type="email" name="email" placeholder="Digite seu Email" id="email">
+                    <input type="tel" name="telefone" placeholder="(11) 98712-1234" id="tel">
+                    <input type="password" name="senha" placeholder="Digite sua Senha" id="pass">
+                    <div class="form-linha">
+                        <div class="esquerda">
+                            <select name="tipoFoto" id="">
+                                <option>Tipo de Foto</option>
+                                <option value="abstrata">Foto Abstrata</option>
+                                <option value="comercial">Foto Comercial</option>
+                                <option value="editorial">Foto Editorial</option>
+                                <option value="manimalista">Foto Minimalista</option>
+                            </select>
+                        </div>
+                        <div class="direita">
+                            <p>Gostou do tandimento ?</p>
+                            <input type="radio" class="radio" name="avaliacao" value="sim">
+                            <p>Sim</p>
+                            <input type="radio" class="radio" name="avaliacao" value="nao">
+                            <p>Não</p>
+                        </div>
+                    </div>
+                    <button id="btnEnviar" name="enviar" type="submit">Enviar</button>
                     <p class="text-form1" id="paragrafo">Preencha o Formulário</p>
                 </div>
             </div>
         </form>
     </section>
-    <footer>
-        <div class="footer-cima">
-            <div class="foot ">
-                <div class="titulo-foot">
-                    Produtos
-                </div>
-                <p>
-                    Templetes de Imgs
-                </p>
-                <p>
-                    Design Inteligente
-                </p>
-                <p>
-                    Pagamentos
-                </p>
-                <p>
-                    E-mail Profissional
-                </p>
-            </div>
-            <div class="foot">
-                <div class="titulo-foot">
-                    Programas
-                </div>
-                <p>
-                    Afiliados
-                </p>
-                <p>
-                    Estudantes
-                </p>
-                <p>
-                    Socios
-                </p>
-                <p>
-                    Contato
-                </p>
-            </div>
-            <div class="foot">
-                <div class="titulo-foot">
-                    Empresa
-                </div>
-                <p>
-                    Sobre
-                </p>
-                <p>
-                    Carreira
-                </p>
-                <p>
-                    Nossa História
-                </p>
-                <p>
-                    Nossa Empresa
-                </p>
-            </div>
-            <div class="foot">
-                <div class="titulo-foot">
-                    Siga a Gente
-                </div>
-                <p>
-                    Instagram
-                </p>
-                <p>
-                    Youtube
-                </p>
-                <p>
-                    Linkendin
-                </p>
-                <p>
-                    Facebook
-                </p>
-            </div>
-            
-        </div>
-        <div class="footer-baixo">
-            <div class="linha"></div>
-            <div class="copy">
-                <div class="foot-texto"> Todos os diretos reservados a StyleScale ©.</div>
-            </div>
-            <div class="galeria">
-                <div class="foot-img">
-                    <img src="img/zap_foto.png" alt="foto" draggable="false">
-                </div>
-                <div class="foot-img">
-                    <img src="img/X_foto.png" alt="foto" draggable="false">
-                </div>
-                <div class="foot-img">
-                    <img src="img/instagram_foto.png" alt="foto" draggable="false">
-                </div>
-                <div class="foot-img">
-                    <img src="img/youtube_foto.png" alt="foto" draggable="false">
-                </div>
-            </div> 
-        </div>
-    </footer>
-    <script src="js/script.js"></script>
+    <?php
+    require 'partials/footer.php';
+    ?>
+    <!-- <script src="js/script.js"></script> -->
 </body>
-</html>
+</php>

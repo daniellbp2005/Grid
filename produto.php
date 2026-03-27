@@ -1,13 +1,14 @@
-<!DOCTYPE html>
+<?php include "data.php";?>
+<!DOCTYPE html >
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produto</title>
-    <link rel="stylesheet" href="../css/produto.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="icon" href="../img/logos-Photoroom (1).png">
+    <link rel="stylesheet" href="css/produto.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="../ img/logos-Photoroom (1).png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -16,33 +17,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../index.html"><img src="../img/logos-Photoroom (1).png" alt=""></a>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Catálogo</a></li>
-                <li><a href="">Login</a></li>
-                <li><a href="">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php
+    require 'partials/header.php';
+    ?>
     <main>
         <div class="conteiner">
             <div class="lado lado-eq">
                 <div class="linha-cont">
                     <div class="grupo-1">
                         <div class="icon">
-                            <a href=""><img src="../img/coração-removebg-preview.png" alt=""></a>
+                            <a href=""><img src=" img/coração-removebg-preview.png" alt=""></a>
                         </div>
                         <div class="icon" style="padding: 1rem;">
-                            <a href="">                            <img src="../img/chat-removebg-preview.png" alt=""></a>
+                            <a href="">                            <img src=" img/chat-removebg-preview.png" alt=""></a>
                         </div>
                         <div class="icon" style="padding: 1rem;">
-                            <a href=""><img src="../img/3pnts-removebg-preview.png" alt=""></a>
+                            <a href=""><img src=" img/3pnts-removebg-preview.png" alt=""></a>
                         </div>
                         <div class="icon">
-                            <a href=""><img src="../img/download-removebg-preview.png" alt=""></a>
+                            <a href=""><img src=" img/download-removebg-preview.png" alt=""></a>
                         </div>
                     </div>
                      <button>
@@ -50,7 +43,7 @@
                     </button>
                 </div>
                 <div class="cont-baixo">
-                    <img src="../img/img_14.jpg" alt="" class="img-prod">
+                    <img src=" img/img_14.jpg" alt="" class="img-prod">
                 </div>
             </div>
             <div class="lado lado-di">
@@ -66,7 +59,7 @@
                         <input type="" placeholder="Nome Completo:">
                         <input type="" placeholder="Email:">
                         <input type="" placeholder="Senha:">
-                        <button class="form-di" id="comprar"><a href="../index.html">Finalizar</a></button>
+                        <button class="form-di" id="comprar"><a href=" index.php">Finalizar</a></button>
                     </form>
                 </div>
             </div>
@@ -154,19 +147,19 @@
             </div>
             <div class="galeria">
                 <div class="foot-img">
-                    <img src="../img/zap_foto.png" alt="foto" draggable="false">
+                    <img src=" img/zap_foto.png" alt="foto" draggable="false">
                 </div>
                 <div class="foot-img">
-                    <img src="../img/X_foto.png" alt="foto" draggable="false">
+                    <img src=" img/X_foto.png" alt="foto" draggable="false">
                 </div>
                 <div class="foot-img">
-                    <img src="../img/instagram_foto.png" alt="foto" draggable="false">
+                    <img src=" img/instagram_foto.png" alt="foto" draggable="false">
                 </div>
                 <div class="foot-img">
-                    <img src="../img/youtube_foto.png" alt="foto" draggable="false">
+                    <img src=" img/youtube_foto.png" alt="foto" draggable="false">
                 </div>
             </div> 
         </div>
     </footer>
 </body>
-</html>
+</php >

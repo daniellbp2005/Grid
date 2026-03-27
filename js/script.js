@@ -5,7 +5,6 @@ const senha = document.getElementById("pass");
 const telefone = document.getElementById("tel");
 const p = document.getElementById("paragrafo")
 
-let aux = false
 
 btnEnviar.addEventListener("click", (e)=>{
     e.preventDefault();
@@ -26,6 +25,5 @@ btnEnviar.addEventListener("click", (e)=>{
         telefone.value = "";
         p.style.color = "green"
         p.innerText="Mensagem Enviada !"
-        aux = true
     }
 })

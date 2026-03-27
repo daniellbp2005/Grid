@@ -1,359 +1,485 @@
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: radial-gradient(circle at right top, #fff,#c4bcbc,rgb(34, 32, 32));
+    background: radial-gradient(circle at right top, #fff, #c4bcbc, rgb(34, 32, 32));
 }
-main{
+
+main {
     margin-top: 3rem;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     max-width: 100%;
 }
-.conteiner{
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: left;
+    width: 80%;
+}
+
+.categoria p {
+    font-family: "Open sans", sans-serif;
+    font-size: clamp(1rem, 1vw, 5rem);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    padding: 0.5rem 0.5rem;
+
+}
+
+.ul-cat {
+    padding: 0;
+}
+
+.ul-cat li:hover {
+    transform: translateY(-2px);
+    font-weight: 600;
+    box-shadow: 1px 3px 2px black;
+}
+
+.ul-cat li {
+    transition: transform .2s ease-in-out;
+    border: none;
+    background-color: rgb(41, 41, 44);
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.conteiner {
     width: 80%;
     height: auto;
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(min(190px,100%),1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr));
     gap: 10px;
 }
 
-.col:hover{
+.col:hover {
     transform: translateY(-8px);
     box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
-    
+
 }
-.col-1{
+
+.col-1 {
     background-image: url(../img/img_10.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
+    background-position: center;
+    aspect-ratio: 1/1.2;
     border: none;
     border-radius: 1rem;
     transition: transform .2s ease-in-out;
     overflow: hidden;
     position: relative;
 }
-.col-1:hover{
+
+.col-1:hover {
     transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
 }
-.col-1:hover button,select{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-1:hover .cima-col{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-2{
-    background-image: url(../img/img_3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
-    border: none;
-    border-radius: 1rem;
-    transition: transform .2s ease-in-out;
-    overflow: hidden;
-    position: relative;
-}
-.col-2:hover{
-    transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
-}
-.col-2:hover .cima-col{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-2:hover button,select{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-3{
-    background-image: url(../img/img_2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
-    border: none;
-    border-radius: 1rem;
-    transition: transform .2s ease-in-out;
-    overflow: hidden;
-    position: relative;
-}
-.col-3:hover{
-    transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
-}
-.col-3:hover .cima-col{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-3:hover button,select{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-4{
-    background-image: url(../img/img_7.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
-    border: none;
-    border-radius: 1rem;
-    transition: transform .2s ease-in-out;
-    overflow: hidden;
-    position: relative;
-}
-.col-4:hover{
-    transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
-}
-.col-4:hover .cima-col{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-4:hover button,select{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-5{
-    background-image: url(../img/img_9.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
-    border: none;
-    border-radius: 1rem;
-    transition: transform .2s ease-in-out;
-    overflow: hidden;
-    position: relative;
-}
-.col-5:hover{
-    transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
-}
-.col-5:hover .cima-col{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-5:hover button,select{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-7{
-    background-image: url(../img/img_11.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
-    border: none;
-    border-radius: 1rem;
-    transition: transform .2s ease-in-out;
-    overflow: hidden;
-    position: relative;
-}
-.col-7:hover{
-    transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
-}
-.col-7:hover .cima-col{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-7:hover button,select{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-8{
-    background-image: url(../img/img_12.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
-    border: none;
-    border-radius: 1rem;
-    transition: transform .2s ease-in-out;
-    overflow: hidden;
-    position: relative;
-}
-.col-8:hover{
-    transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
-}
-.col-8:hover .cima-col{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-8:hover button,select{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-9{
-    background-image: url(../img/img_13.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
-    border: none;
-    border-radius: 1rem;
-    transition: transform .2s ease-in-out;
-    overflow: hidden;
-    position: relative;
-}
-.col-9:hover{
-    transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
-}
-.col-9:hover .cima-col{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-9:hover button,select{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-10{
-    background-image: url(../img/img_14.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
-    border: none;
-    border-radius: 1rem;
-    transition: transform .2s ease-in-out;
-    overflow: hidden;
-    position: relative;
-}
-.col-10:hover{
-    transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
-}
-.col-10:hover .cima-col{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-10:hover button,select{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-11{
-    background-image: url(../img/img_15.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
-    border: none;
-    border-radius: 1rem;
-    transition: transform .2s ease-in-out;
-    overflow: hidden;
-    position: relative;
-}
-.col-11:hover{
-    transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
-}
-.col-11:hover .cima-col{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-11:hover button,select{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-12{
-    background-image: url(../img/img_16.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
-    border: none;
-    border-radius: 1rem;
-    transition: transform .2s ease-in-out;
-    overflow: hidden;
-    position: relative;
-}
-.col-12:hover{
-    transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
-}
-.col-12:hover .cima-col{
-    visibility: visible;
-    opacity: 100%;
-}
-.col-12:hover button,select{
+
+.col-1:hover button,
+select {
     visibility: visible;
     opacity: 100%;
 }
 
-.col-13{
-    background-image: url(../img/img_17.jpg);
+.col-1:hover .cima-col {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-2 {
+    background-image: url(../img/img_3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
+    background-position: center;
+    aspect-ratio: 1/1.2;
     border: none;
     border-radius: 1rem;
     transition: transform .2s ease-in-out;
     overflow: hidden;
     position: relative;
 }
-.col-13:hover{
+
+.col-2:hover {
     transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
 }
-.col-13:hover .cima-col{
+
+.col-2:hover .cima-col {
     visibility: visible;
     opacity: 100%;
 }
-.col-13:hover button,select{
+
+.col-2:hover button,
+select {
     visibility: visible;
     opacity: 100%;
 }
-.col-14{
+
+.col-3 {
+    background-image: url(../img/img_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1.2;
+    border: none;
+    border-radius: 1rem;
+    transition: transform .2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.col-3:hover {
+    transform: translateY(-8px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+}
+
+.col-3:hover .cima-col {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-3:hover button,
+select {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-4 {
+    background-image: url(../img/img_7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1.2;
+    border: none;
+    border-radius: 1rem;
+    transition: transform .2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.col-4:hover {
+    transform: translateY(-8px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+}
+
+.col-4:hover .cima-col {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-4:hover button,
+select {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-5 {
+    background-image: url(../img/img_9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1.2;
+    border: none;
+    border-radius: 1rem;
+    transition: transform .2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.col-5:hover {
+    transform: translateY(-8px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+}
+
+.col-5:hover .cima-col {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-5:hover button,
+select {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-7 {
+    background-image: url(../img/img_11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1.2;
+    border: none;
+    border-radius: 1rem;
+    transition: transform .2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.col-7:hover {
+    transform: translateY(-8px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+}
+
+.col-7:hover .cima-col {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-7:hover button,
+select {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-8 {
     background-image: url(../img/img_12.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
+    background-position: center;
+    aspect-ratio: 1/1.2;
     border: none;
     border-radius: 1rem;
     transition: transform .2s ease-in-out;
     overflow: hidden;
     position: relative;
 }
-.col-14:hover{
+
+.col-8:hover {
     transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
 }
-.col-14:hover .cima-col{
+
+.col-8:hover .cima-col {
     visibility: visible;
     opacity: 100%;
 }
-.col-14:hover button,select{
+
+.col-8:hover button,
+select {
     visibility: visible;
     opacity: 100%;
 }
-.col-15{
+
+.col-9 {
     background-image: url(../img/img_13.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;aspect-ratio: 1/1.2;
+    background-position: center;
+    aspect-ratio: 1/1.2;
     border: none;
     border-radius: 1rem;
     transition: transform .2s ease-in-out;
     overflow: hidden;
     position: relative;
 }
-.col-15:hover{
+
+.col-9:hover {
     transform: translateY(-8px);
-    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514); 
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
 }
-.col-15:hover .cima-col{
+
+.col-9:hover .cima-col {
     visibility: visible;
     opacity: 100%;
 }
-.col-15:hover button,select{
+
+.col-9:hover button,
+select {
     visibility: visible;
     opacity: 100%;
 }
-.cima-col{
+
+.col-10 {
+    background-image: url(../img/img_14.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1.2;
+    border: none;
+    border-radius: 1rem;
+    transition: transform .2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.col-10:hover {
+    transform: translateY(-8px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+}
+
+.col-10:hover .cima-col {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-10:hover button,
+select {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-11 {
+    background-image: url(../img/img_15.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1.2;
+    border: none;
+    border-radius: 1rem;
+    transition: transform .2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.col-11:hover {
+    transform: translateY(-8px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+}
+
+.col-11:hover .cima-col {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-11:hover button,
+select {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-12 {
+    background-image: url(../img/img_16.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1.2;
+    border: none;
+    border-radius: 1rem;
+    transition: transform .2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.col-12:hover {
+    transform: translateY(-8px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+}
+
+.col-12:hover .cima-col {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-12:hover button,
+select {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-13 {
+    background-image: url(../img/img_17.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1.2;
+    border: none;
+    border-radius: 1rem;
+    transition: transform .2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.col-13:hover {
+    transform: translateY(-8px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+}
+
+.col-13:hover .cima-col {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-13:hover button,
+select {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-14 {
+    background-image: url(../img/img_12.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1.2;
+    border: none;
+    border-radius: 1rem;
+    transition: transform .2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.col-14:hover {
+    transform: translateY(-8px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+}
+
+.col-14:hover .cima-col {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-14:hover button,
+select {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-15 {
+    background-image: url(../img/img_13.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1.2;
+    border: none;
+    border-radius: 1rem;
+    transition: transform .2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.col-15:hover {
+    transform: translateY(-8px);
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
+}
+
+.col-15:hover .cima-col {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.col-15:hover button,
+select {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.cima-col {
     width: 100%;
     height: 20%;
     visibility: hidden;
@@ -361,7 +487,7 @@ main{
 }
 
 
-.linha-cima-col{
+.linha-cima-col {
     margin-top: 0.5rem;
     display: flex;
     justify-content: space-between;
@@ -369,19 +495,22 @@ main{
     flex-direction: row;
     border: 0px;
 }
-.linha-cima-col select{
+
+.linha-cima-col select {
     background-color: #00000000;
     color: #fff;
     border: none;
     margin-left: 10px;
 }
-.baixo-col{
+
+.baixo-col {
     width: 100%;
     height: 80%;
     display: flex;
     justify-content: space-between;
 }
-.linha-baixo-col{
+
+.linha-baixo-col {
     height: auto;
     width: 100%;
     display: flex;
@@ -390,7 +519,8 @@ main{
     padding-bottom: 1rem;
     justify-content: right;
 }
-.salvar-col{
+
+.salvar-col {
     width: auto;
     margin-right: 0.2rem;
     padding: 0.3rem 0.5rem;
@@ -398,18 +528,21 @@ main{
     border: none;
     border-radius: 1.5rem;
     transition: transform .2s ease-in-out;
-    background-color: #000;
+    background-color: rgb(14, 14, 15);
     color: white;
-    font-family: "Open snas",sans-serif;
+    font-family: "Open snas", sans-serif;
 }
-.salvar-col:hover{
+
+.salvar-col:hover {
     transform: translateY(-3px);
     font-weight: 600;
 }
-#quatro{
+
+#quatro {
     padding: 0.5rem;
 }
-.linha-baixo-col button{
+
+.linha-baixo-col button {
     width: 30px;
     height: 30px;
     border-radius: 0.5rem;
@@ -418,15 +551,18 @@ main{
     background-color: #fff;
     border: none;
     display: flex;
-    transition: transform .2s ease-in-out;    padding: 0px;
+    transition: transform .2s ease-in-out;
+    padding: 0px;
     margin-right: 0.5rem;
     transition: transform .2s ease-in-out;
 }
-.linha-baixo-col button:hover{
+
+.linha-baixo-col button:hover {
     transform: translateY(-3px);
 }
-.col{
-    
+
+.col {
+
     aspect-ratio: 1/1.2;
     border: none;
     border-radius: 1rem;
@@ -434,7 +570,8 @@ main{
     overflow: hidden;
     position: relative;
 }
-.grande{
+
+.grande {
     grid-column: span 2;
     grid-row: span 2;
     background-color: aqua;
@@ -448,11 +585,13 @@ main{
     display: flex;
     flex-direction: column;
 }
-.cima{
+
+.cima {
     width: 100%;
     height: 20%;
 }
-.linha-cima{
+
+.linha-cima {
     margin-top: 0.5rem;
     display: flex;
     justify-content: space-between;
@@ -460,7 +599,8 @@ main{
     flex-direction: row;
     border: 0px;
 }
-.cima select{
+
+.cima select {
     width: 70px;
     height: 50px;
     border-radius: 0.5rem;
@@ -470,12 +610,14 @@ main{
     border: none;
     display: flex;
     margin-left: 1rem;
-    font-family: "Open snas",sans-serif;
+    font-family: "Open snas", sans-serif;
 }
-option{
+
+option {
     border-radius: 1rem;
 }
-.salvar{
+
+.salvar {
     width: auto;
     margin-right: 1rem;
     padding: 0.6rem 1rem;
@@ -485,19 +627,22 @@ option{
     transition: transform .2s ease-in-out;
     background-color: #000;
     color: white;
-    font-family: "Open snas",sans-serif;
+    font-family: "Open snas", sans-serif;
 }
-.salvar:hover{
+
+.salvar:hover {
     transform: translateY(-5px);
     font-weight: 600;
 }
-.baixo{
+
+.baixo {
     width: 100%;
     height: 80%;
     display: flex;
     justify-content: space-between;
 }
-.linha-baixo{
+
+.linha-baixo {
     height: auto;
     width: 100%;
     display: flex;
@@ -505,7 +650,8 @@ option{
     align-items: flex-end;
     padding: 1rem;
 }
-.linha-baixo button{
+
+.linha-baixo button {
     width: 50px;
     height: 50px;
     border-radius: 0.5rem;
@@ -514,42 +660,51 @@ option{
     background-color: #fff;
     border: none;
     display: flex;
-    transition: transform .2s ease-in-out;    padding: 0px;
+    transition: transform .2s ease-in-out;
+    padding: 0px;
     margin-right: 1rem;
     transition: transform .2s ease-in-out;
 }
-.linha-baixo button:hover{
+
+.linha-baixo button:hover {
     transform: translateY(-5px);
 }
-button img{
-    width:100%;
+
+button img {
+    width: 100%;
     height: 100%;
 }
-#tres{
+
+#tres {
     padding: 1rem;
 }
-.linha-baixo select:hover{
+
+.linha-baixo select:hover {
     transform: translateY(-5px);
 }
-.grande button{
+
+.grande button {
     visibility: hidden;
     opacity: 0%;
 
 }
-.grande:hover button{
-    visibility: visible;
-    opacity: 100%;
-}
-.grande:hover select{
+
+.grande:hover button {
     visibility: visible;
     opacity: 100%;
 }
 
-img{
+.grande:hover select {
+    visibility: visible;
+    opacity: 100%;
+}
+
+img {
     width: 100%;
     height: 100%;
 }
-.alto{
+
+.alto {
     grid-row: span 2;
     aspect-ratio: 1/2.482;
     background-image: url(../img/img_5.jpg);
@@ -557,18 +712,30 @@ img{
     background-size: cover;
     background-position: center;
 }
-.largo{
+
+.alto2 {
+    grid-row: span 2;
+    aspect-ratio: 1/2.482;
+    background-image: url(../img/img_9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.largo {
     grid-column: span 2;
     aspect-ratio: 2/1.15;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
+
 /* .foot-img::before{
     content: "✋😜🤚";
 } */
-section{
+section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -576,11 +743,12 @@ section{
     width: 100%;
     height: auto;
     margin-top: 1.5rem;
-    background:  radial-gradient(circle at top left,white,rgb(5, 5, 77),rgb(92, 50, 85),rgb(0, 0, 0));
+    background: radial-gradient(circle at top left, white, rgb(5, 5, 77), rgb(92, 50, 85), rgb(0, 0, 0));
     padding: 1rem;
 }
+
 /* cmc form */
-form{
+form {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     width: 70%;
@@ -589,88 +757,160 @@ form{
     overflow: hidden;
     transition: transform .2s ease-in-out;
 }
-form:hover{
+
+form:hover {
     transform: translateY(-10px);
     box-shadow: 2px 5px 7px 0px #851c85;
 }
-.lado-e{
+
+.lado-e {
     height: auto;
 }
-.lado-e img{
+
+.lado-e img {
     width: 100%;
     height: 100%;
     position: relative;
 }
-.lado-d{
-    background: radial-gradient(circle
-     at bottom,rgb(64, 64, 105),rgb(3, 3, 61),rgb(53, 6, 53),rgb(0, 0, 0));
+
+.lado-d {
+    background: radial-gradient(circle at bottom, rgb(64, 64, 105), rgb(3, 3, 61), rgb(53, 6, 53), rgb(0, 0, 0));
     height: auto;
     display: flex;
     justify-content: center;
-    
+
 }
-.caixa-form{
+
+.caixa-form {
     display: flex;
     justify-content: center;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     gap: 15px;
     width: 60%;
 }
-.caixa-form p{
+
+.caixa-form p {
     color: #fff;
-    font-family: "Open sans",sans-serif;
-    font-size: clamp(12px,1vw,15px);
-    transition:transform .2s  ease-in-out;
-}.caixa-form p:hover{
+    font-family: "Open sans", sans-serif;
+    font-size: clamp(12px, 1vw, 15px);
+    transition: transform .2s ease-in-out;
+}
+
+.caixa-form p:hover {
     font-weight: 600;
 }
-.form-intro h1{
-    font-family: "Montserrat",sans-serif;
-    color: white;   
+
+.form-intro h1 {
+    font-family: "Montserrat", sans-serif;
+    color: white;
     align-items: left;
 }
-input{
+
+input {
     width: 100%;
     padding: 0.6rem 0.5rem;
     border: none;
     border-radius: 1.5rem;
     transition: transform .2s ease-in-out
 }
-input:hover{
+
+input:hover {
     transform: translateY(-5px);
     box-shadow: 3px 5px 7px #851c85;
 }
-.caixa-form button{
+
+.caixa-form button {
     width: 100%;
     padding: 0.6rem 0.5rem;
     border: none;
     border-radius: 1.5rem;
     transition: transform .2s ease-in-out;
-    background-color: blue;
+    background: radial-gradient(circle at bottom left, blue, black);
     color: white;
-    font-family: "Open sans",sans-serif;
-    font-size: clamp(0.5rem,2vw,1rem);
+    font-family: "Open sans", sans-serif;
+    font-size: clamp(0.5rem, 2vw, 1rem);
 }
-.caixa-form button:hover{
+
+.caixa-form button:hover {
     transform: translateY(-5px);
-    box-shadow: 3px 5px 7px #851c85;    
+    box-shadow: 3px 5px 7px #851c85;
 }
+
+.form-linha {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.radio {
+    width: 20px;
+    height: auto;
+    color: white;
+    transition: none;
+}
+
+.direita {
+    color: white;
+    font-family: "Open sans", sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.direita p {
+    font-size: clamp(0.5rem, 1vw, 0.8rem);
+}
+
+.esquerda select {
+    border: none;
+    border-radius: 1.5rem;
+    background: radial-gradient(circle at bottom left, #000, #851c85);
+    color: white;
+    padding: 0.5rem;
+    transition: transform .2s ease-in-out;
+}
+
+option:checked {
+    background-color: #000;
+}
+
+.esquerda select:hover {
+    transform: translateY(-3px);
+    box-shadow: 3px 5px 7px #851c85;
+}
+
 /* fim form */
-@media (max-width: 663px){
-    .grande{
+@media (max-width: 663px) {
+    .grande {
         grid-column: span 1;
         grid-row: span 1;
         aspect-ratio: 1/1;
     }
-    form{
+
+    form {
         width: 80%;
         grid-template-columns: 1fr;
     }
-    .lado-e{
+
+    .lado-e {
         max-height: 50rem;
     }
-    .lado-d{
+
+    .lado-d {
         padding: 1rem;
+    }
+
+    .esquerda {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-linha {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
     }
 }

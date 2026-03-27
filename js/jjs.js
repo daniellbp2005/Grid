@@ -1,5 +1,5 @@
         const email = document.getElementById("email")
-        const sennha = document.getElementById("senha")
+        const senha = document.getElementById("senha")
         const btn = document.getElementById("btn")
         const p = document.getElementById("texto")
        
@@ -16,7 +16,7 @@
         p.innerText="Preencha os campos do formulário"
 
         }else{
-            window.location.href = "../index.html"
+            window.location.href = "index.php"
         }
     })
 
