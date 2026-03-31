@@ -64,12 +64,106 @@ main {
     height: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr));
-    gap: 10px;
+    gap: 30px;
+    row-gap: 20px;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 0.7solid #000;
+    border-radius: 0.5rem;
+    background-color: #e6e6e6;
+    height: 330px;
+    overflow: hidden;
+    transition: transform .1s ease-in-out;
+}
+
+.col:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 3px 2px #000;
+}
+
+.cima {
+    display: flex;
+    width: 100%;
+    height: 70%;
+}
+
+.cima img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.cima select {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    top: 2%;
+    right: 3%;
+    opacity: 0;
+    border: none;
+    visibility: hidden;
+    z-index: 100;
+    border-radius: 1rem;
+    background-color: #000;
+    color: #e6e6e6;
+    font-size: 10px;
+}
+
+.col:hover .cima select {
+    opacity: 100%;
+    visibility: visible;
+}
+
+.baixo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    height: 30%;
+    gap: 5px;
+    background-color: #fff;
+}
+
+.NomeProd {
+    width: 90%;
+    margin-left: 10px;
+    text-align: left;
+    font-family: "Open sans",sans-serif;
+    font-size: 15px;
+}
+
+.baixo p {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 500;
+    margin-left: 10px;
+    font-family: "Open sans", sans-serif;
+}
+
+.button-col {
+    display: block;
+    transition: transform .2s ease-in-out;
+    width: auto;
+    margin: 0 20px;
+    border: none;
+    border-radius: 1.5rem;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0.3rem 0.7rem;
+}
+
+.button-col:hover {
+    transform: translateY(-3px);
+    box-shadow: 2px 3px 1px #000;
 }
 
 
-
-.col:hover {
+/* .col:hover {
     transform: translateY(-8px);
     box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.514);
 
@@ -321,7 +415,7 @@ img {
 .largo {
     grid-column: span 2;
     aspect-ratio: 2/1.15;
-}
+} */
 
 a {
     text-decoration: none;

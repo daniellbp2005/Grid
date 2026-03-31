@@ -1,10 +1,6 @@
 <?php
-include "data.php";
-// print '<pre>';
-// print_r($categorias);
-// print_r($produtos_base);
-// print "<>";
-?>
+    include "data.php";
+?> 
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,14 +19,13 @@ include "data.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <?php
     require 'partials/header.php';
     ?>
     <main>
         <?php
-        echo '<div class="categoria">'; 
+        echo '<div class="categoria">';
         echo '<p>Catálogo de Produtos:</p>';
         echo '<ul class="ul-cat">';
         foreach ($categorias as $kcat => $catNome) {
@@ -39,44 +34,31 @@ include "data.php";
         echo '</ul>';
         echo '</div>';
         ?>
-        <div class="conteiner">
-        <?php  
-        foreach($produtos_base as $produto){
-            echo '
+    <div class="conteiner">
+            <?php
+            foreach($produtos_base as $produto  ){
+
+                echo '
             <div class="col">
                 <div class="cima">
-                    <div class="linha-cima">
-                        <select name="" id="">
-                            <option value=""><a href="">opções</a></option>
-                            <option value="">Comprar</option>
-                        </select>
-                        <button class="salvar"><a href="produto.php">'.$produto['nome'].'</a></button>
-                    </div>
+                    <select name="" id="">
+                        <option value=""> Mais</option>
+                        <option value=""> Acessar</option>
+                    </select>
+                    <img src="' . $produto['imagem'] . '" alt="">
                 </div>
                 <div class="baixo">
-                    <div class="linha-baixo">
-                        <button>
-                            <a href=""><img src="'.$produto['imagem'].'" alt=""></a>
-                        </button>
-                        <button id="tres">
-                            <a href=""> <img src="img/3pnts-removebg-preview.png" alt=""></a>
-                        </button>
-                    </div>
+                    <a href="produto.php?id=' . $produto['id'] . '"> 
+                    <div class="NomeProd">' . $produto['descricao_curta'] . ' </div>
+                    <!-- <button class="button-col">comprar</button> -->
+                    <p class="preco">R$: ' . $produto['preco'] . '</p>
+                    </a>
                 </div>
             </div>
             ';
-        }
-        ?>
-    <div class="colN">
-        <div class="cima"></div>
-        <div class="baixo">
-            <div class="NomeProd">Nome</div>
-            <button>comprar</button>
-        </div>
+            }
+            ?>
     </div>
-            
-
-        </div>
     </main>
     <section>
         <form action="data.php" method="POST">

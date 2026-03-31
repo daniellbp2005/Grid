@@ -1,4 +1,21 @@
-<?php include "data.php";?>
+<?php include "data.php";
+
+    $id = $_GET['id'] ?? null;
+
+    $produtoEncontrado = null;
+
+    foreach($produtos_base as $produto){
+        if($produto["id"] == $id){
+            $produtoEncontrado = $produto;
+            break;
+        }
+    }
+
+    if(!$produtoEncontrado){
+        echo "Produto Não Encontrado";
+        exit;
+    }
+?>
 <!DOCTYPE html >
 <html lang="pt-br">
 <head>
@@ -21,12 +38,15 @@
     require 'partials/header.php';
     ?>
     <main>
-        <div class="conteiner">
+        <?php 
+            echo '
+            
+            <div class="conteiner">
             <div class="lado lado-eq">
                 <div class="linha-cont">
                     <div class="grupo-1">
                         <div class="icon">
-                            <a href=""><img src=" img/coração-removebg-preview.png" alt=""></a>
+                            <a href=""><img src="'.$produtoEncontrado['imagem'].'" alt=""></a>
                         </div>
                         <div class="icon" style="padding: 1rem;">
                             <a href="">                            <img src=" img/chat-removebg-preview.png" alt=""></a>
@@ -64,6 +84,10 @@
                 </div>
             </div>
         </div>
+            
+            '
+        ; ?>
+        
     </main>
     <section>
         
@@ -162,4 +186,4 @@
         </div>
     </footer>
 </body>
-</php >
+</html>
