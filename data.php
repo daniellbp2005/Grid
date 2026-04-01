@@ -8,15 +8,17 @@ $pass = $_POST['senha'] ?? "";
 $tel = $_POST['telefone'] ?? "";
 $tipoFoto = $_POST['tipoFoto'] ?? "";
 $avaliacao = $_POST['avaliacao'] ?? "";
-// $btn = $POST_['envial']
+// $btn = $POST_['enviar'];
 //?? ""
 
-echo $nome;
-echo $email;
-echo $tel;
-echo $pass;
-echo $tipoFoto;
-echo $avaliacao;
+//aula passada, 01/04/26
+// echo $nome;
+// echo $email;
+// echo $tel;
+// echo $pass;
+// echo $tipoFoto;
+// echo $avaliacao;
+
 
 $categorias = [
     'Abstratas' => 'Abstratas',

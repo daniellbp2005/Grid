@@ -1,5 +1,10 @@
 <?php
-    include "data.php";
+    require_once "init.php";
+
+    if(isset($_GET['produtoadd']) && $_GET['produtoadd'] === '1'){
+        print '<p class="aviso">Produto add com Sucesso!!</p>';
+    }
+
 ?> 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -21,7 +26,7 @@
 </head>
 <body>
     <?php
-    require 'partials/header.php';
+    require_once 'partials/header.php';
     ?>
     <main>
         <?php
@@ -36,8 +41,7 @@
         ?>
     <div class="conteiner">
             <?php
-            foreach($produtos_base as $produto  ){
-
+            foreach($_SESSION['produtos'] as $produto  ){
                 echo '
             <div class="col">
                 <div class="cima">
@@ -61,7 +65,7 @@
     </div>
     </main>
     <section>
-        <form action="data.php" method="POST">
+        <form action="cadastroProduto.php" method="POST">
             <div class="lado-e">
                 <img src="img/img_1.jpg" alt="">
             </div>
@@ -99,7 +103,7 @@
         </form>
     </section>
     <?php
-    require 'partials/footer.php';
+    require_once 'partials/footer.php';
     ?>
     <!-- <script src="js/script.js"></script> -->
 </body>
