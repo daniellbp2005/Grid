@@ -40,13 +40,12 @@
     <main>
         <?php 
             echo '
-            
             <div class="conteiner">
             <div class="lado lado-eq">
                 <div class="linha-cont">
                     <div class="grupo-1">
                         <div class="icon">
-                            <a href=""><img src="'.$produtoEncontrado['imagem'].'" alt=""></a>
+                            <a href=""><img src="img/coração-removebg-preview.png" alt=""></a>
                         </div>
                         <div class="icon" style="padding: 1rem;">
                             <a href="">                            <img src=" img/chat-removebg-preview.png" alt=""></a>
@@ -63,15 +62,14 @@
                     </button>
                 </div>
                 <div class="cont-baixo">
-                    <img src=" img/img_14.jpg" alt="" class="img-prod">
+                    <img src=" '.$produto['imagem'].'" alt="" class="img-prod">
                 </div>
             </div>
             <div class="lado lado-di">
                 <div class="cont-lado-di">
-                    <h1>Foto Profissional de Diamente </h1>
-                    <h2>No moseu do luvre</h2>
-                    <p>de: <s>R$19,99</s> por</p>
-                    <p>R$: 9,99</p>
+                    <h1>'.$produto['nome'].'</h1>
+                    <h2>'.$produto['descricao'].'</h2>
+                    <p>R$: '.$produto['preco'].'</p>
                     <button><a href="#comprar">Comprar</a></button>
                     <h3>A Promoção vai até 25/06/2026</h3>
                     <p class="texto">Para finalizar a compra dessa imagem preencha o forulário abaixo:</p>

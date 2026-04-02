@@ -1,11 +1,15 @@
 <?php
-    require_once "init.php";
+require_once "init.php";
 
-    if(isset($_GET['produtoadd']) && $_GET['produtoadd'] === '1'){
-        print '<p class="aviso">Produto add com Sucesso!!</p>';
-    }
+if (isset($_GET['produtoadd']) && $_GET['produtoadd'] === '1') {
+    print '<p class="aviso">Produto add com Sucesso!!</p>';
+}
+// if (isset($_GET['categoria'])) {
+//     print $_GET['categoria'];
+// }
+$categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
-?> 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -24,6 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <?php
     require_once 'partials/header.php';
@@ -34,35 +39,37 @@
         echo '<p>Catálogo de Produtos:</p>';
         echo '<ul class="ul-cat">';
         foreach ($categorias as $kcat => $catNome) {
-            echo '<li><a href="#cat-' . $kcat . '">' . $catNome . '</a></li>';
+            echo '<li><a href="index.php?categoria=' . $kcat . '">' . $catNome . '</a></li>';
         }
         echo '</ul>';
         echo '</div>';
         ?>
-    <div class="conteiner">
+        <div class="conteiner">
             <?php
-            foreach($_SESSION['produtos'] as $produto  ){
-                echo '
-            <div class="col">
-                <div class="cima">
-                    <select name="" id="">
-                        <option value=""> Mais</option>
-                        <option value=""> Acessar</option>
-                    </select>
-                    <img src="' . $produto['imagem'] . '" alt="">
-                </div>
-                <div class="baixo">
-                    <a href="produto.php?id=' . $produto['id'] . '"> 
-                    <div class="NomeProd">' . $produto['descricao_curta'] . ' </div>
-                    <!-- <button class="button-col">comprar</button> -->
-                    <p class="preco">R$: ' . $produto['preco'] . '</p>
-                    </a>
-                </div>
-            </div>
-            ';
+            foreach ($_SESSION['produtos'] as $produto) {
+                if ($categoria_get == '' || $produto['categoria'] == $categoria_get) {
+                    echo '
+                        <div class="col">
+                            <div class="cima">
+                                <select name="" id="">
+                                    <option value=""> Mais</option>
+                                    <option value=""> Acessar</option>
+                                </select>
+                                <img src="' . $produto['imagem'] . '" alt="">
+                            </div>
+                            <div class="baixo">
+                                <a href="produto.php?id=' . $produto['id'] . '"> 
+                                <div class="NomeProd">' . $produto['descricao_curta'] . ' </div>
+                                <!-- <button class="button-col">comprar</button> -->
+                                <p class="preco">R$: ' . $produto['preco'] . '</p>
+                                </a>
+                            </div>
+                        </div>
+                        ';
+                }
             }
             ?>
-    </div>
+        </div>
     </main>
     <section>
         <form action="cadastroProduto.php" method="POST">

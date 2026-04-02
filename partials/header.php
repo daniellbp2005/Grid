@@ -1,6 +1,6 @@
 <header>
         <nav>   
-            <a href="clone.php"><img src="img/logos-Photoroom (1).png" alt=""></a>
+            <a href="index.php"><img src="img/logos-Photoroom (1).png" alt=""></a>
             <ul>
                 <li><a href="cadastroProduto.php">Home</a></li>
                 <li><a href="">Catálogo</a></li>
