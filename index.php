@@ -38,6 +38,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
         echo '<div class="categoria">';
         echo '<p>Catálogo de Produtos:</p>';
         echo '<ul class="ul-cat">';
+        echo '<li><a href="index.php">Home</sa></li>';
         foreach ($categorias as $kcat => $catNome) {
             echo '<li><a href="index.php?categoria=' . $kcat . '">' . $catNome . '</a></li>';
         }
@@ -72,7 +73,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
         </div>
     </main>
     <section>
-        <form action="cadastroProduto.php" method="POST">
+         <form action="cadastroProduto.php"  method="POST"> 
             <div class="lado-e">
                 <img src="img/img_1.jpg" alt="">
             </div>
@@ -103,7 +104,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
                             <p>Não</p>
                         </div>
                     </div>
-                    <button id="btnEnviar" name="enviar" type="submit">Enviar</button>
+                    <button id="btnEnviarFormulario" name="enviar" type="submit">Enviar</button>
                     <p class="text-form1" id="paragrafo">Preencha o Formulário</p>
                 </div>
             </div>

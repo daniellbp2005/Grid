@@ -1,16 +1,15 @@
-<?php include "data.php";
+<?php include "init.php";
 
     $id = $_GET['id'] ?? null;
 
     $produtoEncontrado = null;
 
-    foreach($produtos_base as $produto){
+    foreach($_SESSION['produtos'] as $produto){
         if($produto["id"] == $id){
             $produtoEncontrado = $produto;
             break;
         }
     }
-
     if(!$produtoEncontrado){
         echo "Produto Não Encontrado";
         exit;

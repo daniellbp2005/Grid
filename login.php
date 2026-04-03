@@ -63,6 +63,6 @@
                     </div>
                 </div>
         </div>
-        <script src="../js/jjs.js"></script>
+        <script src="js/jjs.js"></script>
 </body>
 </php >

@@ -2,7 +2,6 @@
         const senha = document.getElementById("senha")
         const btn = document.getElementById("btn")
         const p = document.getElementById("texto")
-       
         let aux = false
 
     btn.addEventListener("click", (e)=>{

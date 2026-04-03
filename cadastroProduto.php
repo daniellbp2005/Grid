@@ -1,6 +1,6 @@
 <?php
 include_once 'init.php';
-print_r($_POST);
+// print_r($_POST);
 // print_r($produtos_base);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') { //qnd a página for acessada como metodo POST, ele executa esse comando.
     $ids = array_column($_SESSION['produtos'], 'id');
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //qnd a página for acessada como m
         'descricao_curta' => $_POST['descricao_curta'] ?? '',
         'imagem' => $_POST['imagem'] ?? 'img/img_1.jpg'
     ];
-    header('Location: produto.php?produtoadd=1');
+    // header('Location: produto.php?produtoadd=1');
     exit;
 }
 ?>
@@ -52,9 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //qnd a página for acessada como m
         }
         echo '</ul>';
         echo '</div>';
-        ?>
+        ?> 
         <div class=" cadastroProduto">
-            <form action="index.php" method="POST">
+            <form action="" method="POST">
                 <div class="lado-e">
                     <img src="img/img_1.jpg" alt="">
                 </div>
@@ -67,7 +67,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //qnd a página for acessada como m
                         <input type="text" name="preco" placeholder="Digite o Preço do Produto" id="precoProduto">
                         <input type="text" name="descricao_curta" placeholder="Digite a Descrição Curta do Produto" id="catagoriaProduto">
                         <input type="text" name="descricao" placeholder="Digite a Descrição do Produto" id="catagoriaProduto">
-                        <input type="text" name="categoria" placeholder="Digite a Categoria do Produto" id="catagoriaProduto">
+                        <!-- <input type="text" name="categoria" placeholder="Digite a Categoria do Produto" id="catagoriaProduto"> -->
+                         <select name="categoria" id="catagoriaProduto">
+                            <option>Tipo Categoria</option>
+                            <option value="Abstratas">Abastrata</option>
+                            <option value="Comercial">Comercial</option>
+                            <option value="Editorial">Editorial</option>
+                            <option value="Minimalista">Minimalista</option>
+                         </select>
                         <input type="url" name="imagem" placeholder="Cole a URL da Imagem (ex: https://example.com/img.jpg)" id="imagemProduto">
                         <div class="form-linha">
                         </div>
