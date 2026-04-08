@@ -149,7 +149,7 @@ main {
 }
 
 .baixo p {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-size: clamp(1rem, 1vw, 1.5rem);
     font-weight: 500;
     margin-left: 10px;
     font-family: "Open sans", sans-serif;

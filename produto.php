@@ -1,18 +1,39 @@
 <?php include "init.php";
 
-    $id = $_GET['id'] ?? null;
+    //primeira opção
+    // $id = $_GET['id'] ?? null;
 
-    $produtoEncontrado = null;
+    // $produtoEncontrado = null;
 
-    foreach($_SESSION['produtos'] as $produto){
-        if($produto["id"] == $id){
-            $produtoEncontrado = $produto;
-            break;
-        }
-    }
-    if(!$produtoEncontrado){
-        echo "Produto Não Encontrado";
-        exit;
+    // foreach($_SESSION['produtos'] as $produto){
+    //     if($produto["id"] == $id){
+    //         $produtoEncontrado = $produto;
+    //         break;
+    //     }
+    // }
+    // if(!$produtoEncontrado){
+    //     echo "Produto Não Encontrado";
+    //     exit;
+    // }
+    // nessa opção e melhor usar echo no html para aparecer ne tela 
+
+
+    //segunda opção
+    //essa é mais rápida pois procura o produto pelo indece
+    $id = isset($_GET['id']) ? (int) $_GET['id']: 0;
+    
+    $ids = array_column($_SESSION['produtos'], 'id');
+    // print '<pre>';
+    // print_r($ids);
+    // print_r($_SESSION['produtos']);
+    $index = array_search($id, $ids); // procura o id no ids
+    $produto = $_SESSION['produtos'][$index];
+
+    if($index !== false){
+        $produto = $_SESSION['produtos'][$index];
+    } else {
+        header('Location: 404.php');
+        exit();
     }
 ?>
 <!DOCTYPE html >
@@ -37,8 +58,7 @@
     require_once 'partials/header.php';
     ?>
     <main>
-        <?php 
-            echo '
+
             <div class="conteiner">
             <div class="lado lado-eq">
                 <div class="linha-cont">
@@ -61,14 +81,14 @@
                     </button>
                 </div>
                 <div class="cont-baixo">
-                    <img src=" '.$produto['imagem'].'" alt="" class="img-prod">
+                    <img src=" <?php echo $produto['imagem']; ?>" alt="" class="img-prod">
                 </div>
             </div>
             <div class="lado lado-di">
                 <div class="cont-lado-di">
-                    <h1>'.$produto['nome'].'</h1>
-                    <h2>'.$produto['descricao'].'</h2>
-                    <p>R$: '.$produto['preco'].'</p>
+                    <h1><?php echo $produto['nome'];?></h1>
+                    <h2><?php echo $produto['descricao']; ?></h2>
+                    <p>R$: <?php echo $produto['preco']; ?></p>
                     <button><a href="#comprar">Comprar</a></button>
                     <h3>A Promoção vai até 25/06/2026</h3>
                     <p class="texto">Para finalizar a compra dessa imagem preencha o forulário abaixo:</p>
@@ -81,9 +101,7 @@
                 </div>
             </div>
         </div>
-            
-            '
-        ; ?>
+
         
     </main>
     <section>

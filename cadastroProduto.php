@@ -43,16 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //qnd a página for acessada como m
     require_once 'partials/header.php';
     ?>
     <main>
-        <?php
-        echo '<div class="categoria">';
-        echo '<p>Catálogo de Produtos:</p>';
-        echo '<ul class="ul-cat">';
-        foreach ($categorias as $kcat => $catNome) {
-            echo '<li><a href="#cat-' . $kcat . '">' . $catNome . '</a></li>';
-        }
-        echo '</ul>';
-        echo '</div>';
-        ?> 
+        
         <div class=" cadastroProduto">
             <form action="" method="POST">
                 <div class="lado-e">
@@ -70,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //qnd a página for acessada como m
                         <!-- <input type="text" name="categoria" placeholder="Digite a Categoria do Produto" id="catagoriaProduto"> -->
                          <select name="categoria" id="catagoriaProduto">
                             <option>Tipo Categoria</option>
-                            <option value="Abstratas">Abastrata</option>
+                            <option value="Abstratas">Abstrata</option>
                             <option value="Comercial">Comercial</option>
                             <option value="Editorial">Editorial</option>
                             <option value="Minimalista">Minimalista</option>
